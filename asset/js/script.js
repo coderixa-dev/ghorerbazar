@@ -98,6 +98,22 @@ const productsSwiper = new Swiper(".products-swiper", {
 
 
 // ========================================
+//   Brand Spotlight Swiper
+// ========================================
+const spotlightSwiper = new Swiper(".spotlight-swiper", {
+    loop: true,
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".spotlight-pagination",
+        clickable: true,
+    },
+});
+
+
+// ========================================
 //   Just For You - Load More
 // ========================================
 const loadMoreBtn = document.getElementById("loadMoreBtn");
@@ -137,6 +153,46 @@ const reviewsSwiper = new Swiper(".reviews-swiper", {
     },
 });
 
+// ========================================
+//   Shop Page - Price Range Dual Slider
+// ========================================
+const priceMin = document.getElementById("priceMin");
+const priceMax = document.getElementById("priceMax");
+const priceMinLabel = document.getElementById("priceMinLabel");
+const priceMaxLabel = document.getElementById("priceMaxLabel");
+const priceFill = document.getElementById("priceFill"); // 👈 নতুন লাইন
+
+if (priceMin && priceMax) {
+
+    function updatePriceLabels() {
+        let minVal = parseInt(priceMin.value);
+        let maxVal = parseInt(priceMax.value);
+
+        // Duita handle ekjon onner cross kore jete parbe na
+        if (minVal > maxVal - 100) {
+            minVal = maxVal - 100;
+            priceMin.value = minVal;
+        }
+
+        priceMinLabel.textContent = "৳ " + minVal.toLocaleString();
+        priceMaxLabel.textContent = "৳ " + maxVal.toLocaleString();
+
+        // 👇 নতুন অংশ: fill bar update
+        if (priceFill) {
+            const range = parseInt(priceMin.max) - parseInt(priceMin.min);
+            const minPercent = ((minVal - priceMin.min) / range) * 100;
+            const maxPercent = ((maxVal - priceMin.min) / range) * 100;
+
+            priceFill.style.left = minPercent + "%";
+            priceFill.style.right = (100 - maxPercent) + "%";
+        }
+    }
+
+    priceMin.addEventListener("input", updatePriceLabels);
+    priceMax.addEventListener("input", updatePriceLabels);
+
+    updatePriceLabels(); // 👈 initial load এ fill বসানোর জন্য
+}
 
 // ========================================
 //   Scroll To Top Button + Progress Ring
@@ -238,6 +294,8 @@ function saveCart() {
 
 function renderCart() {
 
+    if (!cartItemsContainer) return;
+
     cartItemsContainer.innerHTML = "";
 
     if (cart.length === 0) {
@@ -281,9 +339,9 @@ function renderCart() {
     const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
     const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
 
-    floatingCartCount.textContent = totalItems + " Items";
-    floatingCartTotal.textContent = "৳" + totalPrice.toLocaleString();
-    cartSubtotal.textContent = "৳" + totalPrice.toLocaleString();
+    if (floatingCartCount) floatingCartCount.textContent = totalItems + " Items";
+    if (floatingCartTotal) floatingCartTotal.textContent = "৳" + totalPrice.toLocaleString();
+    if (cartSubtotal) cartSubtotal.textContent = "৳" + totalPrice.toLocaleString();
 }
 
 // ---- Cart Actions ----
@@ -343,3 +401,181 @@ document.querySelectorAll(".btn-add-cart, .add-cart-btn").forEach(function (btn)
 
 // ---- Initial Render ----
 renderCart();
+
+
+
+// ========================================
+//   Product Details - Thumbnail Gallery
+// ========================================
+const thumbItems = document.querySelectorAll(".thumb-item");
+const mainProductImg = document.getElementById("mainProductImg");
+
+thumbItems.forEach(function (thumb) {
+    thumb.addEventListener("click", function () {
+        thumbItems.forEach(t => t.classList.remove("active"));
+        thumb.classList.add("active");
+        mainProductImg.src = thumb.querySelector("img").src;
+    });
+});
+
+// ========================================
+//   Product Details - Quantity Stepper
+// ========================================
+const pdQtyMinus = document.getElementById("pdQtyMinus");
+const pdQtyPlus = document.getElementById("pdQtyPlus");
+const pdQtyValue = document.getElementById("pdQtyValue");
+
+if (pdQtyMinus && pdQtyPlus && pdQtyValue) {
+
+    pdQtyPlus.addEventListener("click", function () {
+        let val = parseInt(pdQtyValue.textContent);
+        pdQtyValue.textContent = val + 1;
+    });
+
+    pdQtyMinus.addEventListener("click", function () {
+        let val = parseInt(pdQtyValue.textContent);
+        if (val > 1) pdQtyValue.textContent = val - 1;
+    });
+
+}
+
+
+// ========================================
+//   Product Details - Gallery Prev/Next Arrows
+// ========================================
+const galleryPrev = document.querySelector(".gallery-prev");
+const galleryNext = document.querySelector(".gallery-next");
+
+if (galleryPrev && galleryNext && mainProductImg && thumbItems.length > 0) {
+
+    function getActiveThumbIndex() {
+        let activeIndex = 0;
+        thumbItems.forEach(function (thumb, index) {
+            if (thumb.classList.contains("active")) {
+                activeIndex = index;
+            }
+        });
+        return activeIndex;
+    }
+
+    function setActiveThumb(index) {
+        thumbItems.forEach(t => t.classList.remove("active"));
+        thumbItems[index].classList.add("active");
+        mainProductImg.src = thumbItems[index].querySelector("img").src;
+    }
+
+    galleryNext.addEventListener("click", function () {
+        let currentIndex = getActiveThumbIndex();
+        let nextIndex = (currentIndex + 1) % thumbItems.length; // shesh e gele abar shuru theke
+        setActiveThumb(nextIndex);
+    });
+
+    galleryPrev.addEventListener("click", function () {
+        let currentIndex = getActiveThumbIndex();
+        let prevIndex = (currentIndex - 1 + thumbItems.length) % thumbItems.length; // shuru theke gele shesh e chole jabe
+        setActiveThumb(prevIndex);
+    });
+
+}
+
+
+
+// ========================================
+//   Product Details - Tabs (Description / Reviews)
+// ========================================
+const pdTabBtns = document.querySelectorAll(".pd-tab-btn");
+const pdTabContents = document.querySelectorAll(".pd-tab-content");
+
+pdTabBtns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+        const targetTab = btn.getAttribute("data-tab");
+
+        pdTabBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        pdTabContents.forEach(function (content) {
+            content.classList.remove("active");
+        });
+
+        document.getElementById("tab-" + targetTab).classList.add("active");
+    });
+});
+
+
+
+// ========================================
+//   Product Reviews - Image Upload (Drag & Drop + Preview)
+// ========================================
+const reviewUploadBox = document.getElementById("reviewUploadBox");
+const reviewImageInput = document.getElementById("reviewImageInput");
+const reviewImagePreview = document.getElementById("reviewImagePreview");
+
+let selectedReviewFiles = [];
+
+if (reviewUploadBox && reviewImageInput && reviewImagePreview) {
+
+    function renderPreview() {
+        reviewImagePreview.innerHTML = "";
+
+        selectedReviewFiles.forEach(function (file, index) {
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                const item = document.createElement("div");
+                item.className = "review-preview-item";
+                item.innerHTML = `
+                    <img src="${e.target.result}" alt="Preview">
+                    <span class="review-preview-remove" data-index="${index}">
+                        <i class="fa-solid fa-xmark"></i>
+                    </span>
+                `;
+                reviewImagePreview.appendChild(item);
+
+                // Remove button
+                item.querySelector(".review-preview-remove").addEventListener("click", function () {
+                    selectedReviewFiles.splice(index, 1);
+                    renderPreview();
+                });
+            };
+
+            reader.readAsDataURL(file);
+        });
+    }
+
+    function addFiles(fileList) {
+        const newFiles = Array.from(fileList);
+
+        if (selectedReviewFiles.length + newFiles.length > 3) {
+            alert("সর্বোচ্চ ৩টি ছবি আপলোড করা যাবে।");
+            return;
+        }
+
+        selectedReviewFiles = selectedReviewFiles.concat(newFiles);
+        renderPreview();
+    }
+
+    reviewUploadBox.addEventListener("click", function () {
+        reviewImageInput.click();
+    });
+
+    reviewUploadBox.addEventListener("dragover", function (e) {
+        e.preventDefault();
+        reviewUploadBox.classList.add("dragover");
+    });
+
+    reviewUploadBox.addEventListener("dragleave", function () {
+        reviewUploadBox.classList.remove("dragover");
+    });
+
+    reviewUploadBox.addEventListener("drop", function (e) {
+        e.preventDefault();
+        reviewUploadBox.classList.remove("dragover");
+        addFiles(e.dataTransfer.files);
+    });
+
+    reviewImageInput.addEventListener("change", function () {
+        addFiles(reviewImageInput.files);
+        reviewImageInput.value = ""; // same file আবার select করতে পারার জন্য reset
+    });
+
+}

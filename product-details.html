@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GhorerBazar - Organic Food Store"</title>
+
+    <link rel="icon" href="asset/images/logo/favicon.png" type="image/x-icon">
+
+
+    <!-- ========================================
+         Bootstrap CSS
+    ========================================= -->
+
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+
+
+    <!-- ========================================
+         Google Font
+    ========================================= -->
+
+    <link rel="stylesheet" href="asset/css/font.css">
+
+
+    <!-- ========================================
+         Font Awesome
+    ========================================= -->
+
+    <link rel="stylesheet" href="asset/css/all.min.css">
+
+
+    <!-- ========================================
+         Swiper CSS
+    ========================================= -->
+
+    <link rel="stylesheet" href="asset/css/swiper-bundle.min.css">
+
+
+
+    <!-- ========================================
+         Custom CSS
+    ========================================= -->
+
+    <link rel="stylesheet" href="asset/css/style.css">
+
+</head>
+
+
+<body>
+
+
+
+    <!-- ========================================
+       Header Section Start
+    ========================================= -->
+    <header class="site-header">
+
+        <!-- Top Row: Logo + Search + Icons -->
+        <div class="header-top">
+            <div class="container">
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 py-3">
+
+                    <!-- Logo -->
+                    <a href="index.html" class="logo d-flex align-items-center gap-2">
+                        <img src="asset/images/logo/logo.png" alt="Ghorer Bazar Logo" height="45">
+                    </a>
+
+                    <!-- Search Bar -->
+                    <div class="search-box flex-grow-1">
+                        <form class="d-flex">
+                            <input type="text" class="form-control" placeholder="Search in...">
+                            <button type="submit" class="search-btn">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Icon Links -->
+                    <div class="header-icons d-flex align-items-center gap-4">
+
+                        <a href="track-order.html" class="icon-link">
+                            <i class="fa-solid fa-truck-fast"></i>
+                            <span>Track Order</span>
+                        </a>
+
+                        <a href="login.html" class="icon-link">
+                            <i class="fa-regular fa-user"></i>
+                            <span>Sign In</span>
+                        </a>
+
+                        <a href="wishlist.html" class="icon-link">
+                            <i class="fa-regular fa-heart"></i>
+                            <span>Wishlist</span>
+                        </a>
+
+                        <a href="cart.html" class="icon-link position-relative">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="cart-count">1</span>
+                            <span>Cart</span>
+                        </a>
+
+                        <div class="icon-link-dropdown">
+                            <a href="#" class="icon-link">
+                                <i class="fa-solid fa-bars"></i>
+                                <span>More</span>
+                            </a>
+                            <ul class="more-dropdown-list">
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="faq.html">FAQs</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="careers.html">Careers</a></li>
+                                <li><a href="tel:8809642922922"><i class="fa-solid fa-phone"></i> Call Us</a></li>
+                                <li><a href="https://api.whatsapp.com/send"><i class="fa-brands fa-whatsapp"></i>
+                                        WhatsApp</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Row: Category Navigation -->
+        <nav class="header-nav">
+            <div class="container">
+                <ul class="nav-menu d-flex align-items-center flex-wrap">
+
+                    <li><a href="combos.html">Combos</a></li>
+                    <li><a href="offer-zone.html">Offer Zone</a></li>
+
+                    <li class="dropdown">
+                        <a href="honey.html">Honey <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-list">
+                            <li><a href="#">Sundarban Honey</a></li>
+                            <li><a href="#">Black Seed Honey</a></li>
+                            <li><a href="#">Lychee Flower Honey</a></li>
+                            <li><a href="#">Sidr Honey</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="oil-ghee.html">Oil & Ghee</a></li>
+
+                    <li class="dropdown">
+                        <a href="dates.html">Dates <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-list">
+                            <li><a href="#">Medjool</a></li>
+                            <li><a href="#">Sukkari</a></li>
+                            <li><a href="#">Ajwa</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="spices.html">Spices <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-list">
+                            <li><a href="#">Whole Spices</a></li>
+                            <li><a href="#">Basic Spices</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="nuts-seeds.html">Nuts & Seeds <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-list">
+                            <li><a href="#">Nuts</a></li>
+                            <li><a href="#">Seeds</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="beverage.html">Beverage <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-list">
+                            <li><a href="#">Tea</a></li>
+                            <li><a href="#">Coffee</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="rice.html">Rice</a></li>
+
+                    <li class="dropdown">
+                        <a href="flours-lentils.html">Flours & Lentils <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-list">
+                            <li><a href="#">Flours</a></li>
+                            <li><a href="#">Lentils</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="certified.html">Certified</a></li>
+                    <li><a href="pickle.html">Pickle</a></li>
+                    <li><a href="tabaya.html">Tabaya</a></li>
+
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+    <!-- ========================================
+       Header Section End
+    ========================================= -->
+
+
+
+    <main>
+
+
+        <!-- ========================================
+       Breadcrumb Start
+    ========================================= -->
+        <div class="breadcrumb-bar">
+            <div class="container">
+                <nav class="breadcrumb-nav">
+                    <a href="index.html">Home</a>
+                    <i class="fa-solid fa-angle-right"></i>
+                    <span>Products</span>
+                </nav>
+            </div>
+        </div>
+        <!-- ========================================
+       Breadcrumb End
+    ========================================= -->
+
+        <!-- ========================================
+   Product Details Section Start
+======================================== -->
+        <section class="product-details-section">
+            <div class="container">
+                <div class="product-details-wrap">
+                    <div class="row g-4">
+
+                        <!-- Left: Gallery -->
+                        <div class="col-lg-6">
+                            <div class="product-gallery">
+
+                                <!-- Thumbnails -->
+                                <div class="gallery-thumbs">
+                                    <div class="thumb-item active">
+                                        <img src="asset/images/products/product_1.jpg" alt="Honey Nuts 800gm">
+                                    </div>
+                                    <div class="thumb-item">
+                                        <img src="asset/images/products/product_2.jpg" alt="Honey Nuts 800gm">
+                                    </div>
+                                    <div class="thumb-item">
+                                        <img src="asset/images/products/product_3.jpg" alt="Honey Nuts 800gm">
+                                    </div>
+                                    <div class="thumb-item">
+                                        <img src="asset/images/products/product_1.jpg" alt="Honey Nuts 800gm">
+                                    </div>
+                                </div>
+
+                                <!-- Main Image -->
+                                <div class="gallery-main">
+                                    <button type="button" class="gallery-nav gallery-prev">
+                                        <i class="fa-solid fa-chevron-left"></i>
+                                    </button>
+
+                                    <img src="asset/images/products/product_1.jpg" alt="Honey Nuts 800gm"
+                                        id="mainProductImg">
+
+                                    <button type="button" class="gallery-nav gallery-next">
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Right: Info -->
+                        <div class="col-lg-6">
+                            <div class="product-details-info">
+
+                                <h1 class="pd-title">Honey Nuts 800gm</h1>
+
+                                <div class="pd-price">৳1,700.00</div>
+
+                                <hr class="pd-divider">
+
+                                <!-- Quantity -->
+                                <div class="pd-qty-row">
+                                    <span class="pd-qty-label">Quantity:</span>
+                                    <div class="qty-stepper pd-qty-stepper">
+                                        <button type="button" id="pdQtyMinus">−</button>
+                                        <span id="pdQtyValue">1</span>
+                                        <button type="button" id="pdQtyPlus">+</button>
+                                    </div>
+                                </div>
+
+                                <!-- Action Buttons -->
+                                <div class="pd-actions">
+                                    <button type="button" class="pd-btn pd-btn-cart">
+                                        <i class="fa-solid fa-bag-shopping"></i> Add To Cart
+                                    </button>
+                                    <button type="button" class="pd-btn pd-btn-buy">
+                                        Buy Now
+                                    </button>
+                                    <a href="https://api.whatsapp.com/send" target="_blank"
+                                        class="pd-btn pd-btn-whatsapp">
+                                        <i class="fa-brands fa-whatsapp"></i> Order On WhatsApp
+                                    </a>
+                                    <a href="tel:8809642922922" class="pd-btn pd-btn-call">
+                                        <i class="fa-solid fa-phone"></i> Call For Order
+                                    </a>
+                                </div>
+
+                                <!-- Brand -->
+                                <div class="pd-brand-box">
+                                    <span>Brand:</span>
+                                    <img src="asset/images/brands/brand_1.png" alt="GhorerBazar">
+                                    <strong>GhorerBazar</strong>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ========================================
+   Product Details Section End
+======================================== -->
+
+
+        <!-- ========================================
+   Product Tabs Section (Description / Reviews) Start
+======================================== -->
+        <section class="product-tabs-section">
+            <div class="container">
+
+                <!-- Tab Buttons -->
+                <div class="pd-tabs-nav">
+                    <button type="button" class="pd-tab-btn active" data-tab="description">
+                        Description
+                    </button>
+                    <button type="button" class="pd-tab-btn" data-tab="reviews">
+                        Customer Reviews (1)
+                    </button>
+                </div>
+
+                <!-- Tab Content: Description -->
+                <div class="pd-tab-content active" id="tab-description">
+
+                    <h3 class="pd-tab-title">Product Details</h3>
+
+                    <p>The relationship between nuts and honey may seem new, but their history goes back a long way.
+                        According to researchers, along with fruits, vegetables, and meat, nuts have long been in
+                        demand as a food source. Their high nutritional value is one of the key reasons behind this
+                        demand. Nuts can also be stored for long periods without special care, which historically
+                        gave them a prestigious place in the human diet. In ancient times, both the Greeks and the
+                        Romans used nuts as medicine.</p>
+
+                    <p>However, discussions around "honey nuts" likely became popular after the COVID-19 pandemic.
+                        With the rapid rise of online-based businesses during that time, the name "honey nuts"
+                        reached people more widely.</p>
+
+                    <p>People often believe that healthy food tastes bland — but Ghorerbazar's Honey Nuts will change
+                        that perception. Made from natural honey and a mix of premium-grade nuts, Ghorerbazar Honey
+                        Nuts deliver a delicious and nutritious snack. Although many types of honey nuts are
+                        available in the market, ours stand out because they do not contain raisins, dates, seeds, or
+                        similar fillers. As a result, the taste is exceptionally rich and enjoyable.</p>
+
+                    <p><strong>Ingredients:</strong></p>
+
+                    <ul class="pd-tab-list">
+                        <li>Almonds.</li>
+                        <li>Walnuts.</li>
+                        <li>Cashews.</li>
+                        <li>Peanuts.</li>
+                        <li>White sesame.</li>
+                        <li>Sunflower seeds.</li>
+                        <li>Pistachios.</li>
+                        <li>Dates.</li>
+                        <li>Figs.</li>
+                        <li>Apricots.</li>
+                    </ul>
+
+                    <p>
+                        <strong>Benefits of Honey Nuts:</strong>
+                        <br>
+                        Nutritionist Nahida Ahmed from Dhaka's Farazi Hospital explains that nuts play a vital role
+                        in improving heart health. The omega-3 fats found in nuts are beneficial for the heart and
+                        help reduce the risk of cardiovascular diseases. Nuts are also rich in calcium, vitamins, and
+                        iron, which strengthen immunity and support overall physical development.
+                    </p>
+
+                    <p>According to nutritionists, the calcium, vitamins, and iron present in nuts help boost
+                        immunity, strengthen bones, improve blood circulation, enhance memory, and reduce mental
+                        stress.</p>
+
+                    <p>On the other hand, honey is considered a powerful natural remedy in Ayurvedic and Unani
+                        medicine. It helps strengthen the body's immune system and offers many additional health
+                        benefits, including reducing heart disease risk, improving blood circulation by dilating
+                        blood vessels, and supporting healthy heart function.</p>
+
+                </div>
+
+                <!-- Tab Content: Reviews -->
+                <div class="pd-tab-content" id="tab-reviews">
+
+                    <div class="row g-4">
+
+                        <!-- Left: Rating Summary -->
+                        <div class="col-lg-4">
+                            <div class="rating-summary">
+
+                                <div class="rating-score-row">
+                                    <span class="rating-score-number">5.0</span>
+                                    <div class="rating-score-info">
+                                        <span class="rating-score-label">Average Rating</span>
+                                        <div class="review-stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <span class="rating-count-text">(1 Reviews)</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="rating-recommend-row">
+                                    <span class="recommend-percent">100.00%</span>
+                                    <span class="recommend-label">Recommended <span>(3 of 3)</span></span>
+                                </div>
+
+                                <div class="rating-bars">
+
+                                    <div class="rating-bar-row">
+                                        <span class="rating-bar-stars">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i>
+                                        </span>
+                                        <div class="rating-bar-track">
+                                            <div class="rating-bar-fill" style="width: 100%;"></div>
+                                        </div>
+                                        <span class="rating-bar-percent">100%</span>
+                                    </div>
+
+                                    <div class="rating-bar-row">
+                                        <span class="rating-bar-stars">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                class="fa-regular fa-star"></i>
+                                        </span>
+                                        <div class="rating-bar-track">
+                                            <div class="rating-bar-fill" style="width: 0%;"></div>
+                                        </div>
+                                        <span class="rating-bar-percent">0%</span>
+                                    </div>
+
+                                    <div class="rating-bar-row">
+                                        <span class="rating-bar-stars">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i
+                                                class="fa-regular fa-star"></i>
+                                        </span>
+                                        <div class="rating-bar-track">
+                                            <div class="rating-bar-fill" style="width: 0%;"></div>
+                                        </div>
+                                        <span class="rating-bar-percent">0%</span>
+                                    </div>
+
+                                    <div class="rating-bar-row">
+                                        <span class="rating-bar-stars">
+                                            <i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i
+                                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                                                class="fa-regular fa-star"></i>
+                                        </span>
+                                        <div class="rating-bar-track">
+                                            <div class="rating-bar-fill" style="width: 0%;"></div>
+                                        </div>
+                                        <span class="rating-bar-percent">0%</span>
+                                    </div>
+
+                                    <div class="rating-bar-row">
+                                        <span class="rating-bar-stars">
+                                            <i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i
+                                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                                                class="fa-regular fa-star"></i>
+                                        </span>
+                                        <div class="rating-bar-track">
+                                            <div class="rating-bar-fill" style="width: 0%;"></div>
+                                        </div>
+                                        <span class="rating-bar-percent">0%</span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Right: Review Form -->
+                        <div class="col-lg-8">
+                            <div class="review-form-wrap">
+
+                                <h3 class="pd-tab-title">Submit Your Review</h3>
+
+                                <p class="review-form-note">Your email address will not be published. Required
+                                    fields are marked *</p>
+
+                                <label class="review-form-label">Write your opinion about the product</label>
+                                <textarea class="review-textarea" placeholder="Write Your Review Here..."></textarea>
+
+                                <label class="review-form-label">Upload Images (Optional)</label>
+                                <div class="review-upload-box" id="reviewUploadBox">
+                                    <input type="file" id="reviewImageInput" accept="image/*" multiple hidden>
+                                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                                    <p>Drag & Drop Images Here</p>
+                                    <span>or click to browse files ( 3 max )</span>
+                                </div>
+                                <div class="review-image-preview" id="reviewImagePreview"></div>
+
+                                <div class="review-form-bottom-row">
+                                    <div class="review-rating-select-wrap">
+                                        <label class="review-form-label">Your Rating:</label>
+                                        <select class="review-rating-select">
+                                            <option>Select One</option>
+                                            <option>Perfect</option>
+                                            <option>Good</option>
+                                            <option>Average</option>
+                                            <option>Not that bad</option>
+                                            <option>Very poor</option>
+                                        </select>
+                                    </div>
+
+                                    <button type="button" class="btn-submit-review">SUBMIT REVIEW</button>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+
+                    <!-- Review List -->
+                    <div class="pd-review-list">
+
+                        <div class="pd-review-item">
+                            <div class="pd-review-author-row">
+                                <img src="asset/images/reviews/review.png" alt="Foisal Nayeem" class="pd-review-avatar">
+                                <div>
+                                    <h4 class="pd-review-name">Foisal Nayeem <span class="pd-review-date">June 05,
+                                            2026 06:22 pm</span></h4>
+                                    <div class="review-stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="pd-review-text">ঘরের বাজারের হানি নাট আমি খেয়েছি। অসাধারণ সুন্দর আপনারাও নিতে
+                                পারেন। ইনশাআল্লাহ খেয়ে ভালো লাগবে।</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- ========================================
+   Product Tabs Section End
+======================================== -->
+
+        <!-- ========================================
+      Related Products Section Start
+    ========================================= -->
+        <section class="products-section">
+            <div class="container">
+
+                <div class="brands-header d-flex align-items-end justify-content-between">
+                    <h2 class="section-title-underline">Related Products</h2>
+                    <a href="shop.html" class="see-all-link">
+                        VIEW ALL ITEMS <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <hr class="brands-divider">
+
+                <div class="swiper products-swiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <span class="product-badge badge-best">Best Selling</span>
+                                <a href="product-details.html" class="product-img">
+                                    <img src="asset/images/products/product_1.jpg" alt="Honey Nuts 800gm">
+                                </a>
+                                <div class="product-info">
+                                    <h3 class="product-title">Honey Nuts 800gm</h3>
+                                    <span class="product-price">৳1,700</span>
+                                    <button class="btn-add-cart">
+                                        <i class="fa-solid fa-cart-shopping"></i> Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <a href="product-details.html" class="product-img">
+                                    <img src="asset/images/products/product_2.jpg"
+                                        alt="African Organic Wild Honey 500g">
+                                </a>
+                                <div class="product-info">
+                                    <h3 class="product-title">African Organic Wild Honey 500g</h3>
+                                    <span class="product-price">৳1,250</span>
+                                    <button class="btn-add-cart">
+                                        <i class="fa-solid fa-cart-shopping"></i> Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <a href="product-details.html" class="product-img">
+                                    <img src="asset/images/products/product_3.jpg" alt="Black Seed Honey 500g">
+                                </a>
+                                <div class="product-info">
+                                    <h3 class="product-title">Black Seed Honey 500g</h3>
+                                    <span class="product-price">৳800</span>
+                                    <button class="btn-add-cart">
+                                        <i class="fa-solid fa-cart-shopping"></i> Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <a href="product-details.html" class="product-img">
+                                    <img src="asset/images/products/product_1.jpg" alt="Lychee Flower Honey 500g">
+                                </a>
+                                <div class="product-info">
+                                    <h3 class="product-title">Lychee Flower Honey 500g</h3>
+                                    <span class="product-price">৳700</span>
+                                    <button class="btn-add-cart">
+                                        <i class="fa-solid fa-cart-shopping"></i> Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <span class="product-badge badge-new">New Arrival</span>
+                                <a href="product-details.html" class="product-img">
+                                    <img src="asset/images/products/product_2.jpg" alt="Kashmiri Sidr Honey 800g">
+                                </a>
+                                <div class="product-info">
+                                    <h3 class="product-title">Kashmiri Sidr Honey 800g</h3>
+                                    <span class="product-price">৳2,000</span>
+                                    <button class="btn-add-cart">
+                                        <i class="fa-solid fa-cart-shopping"></i> Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <a href="product-details.html" class="product-img">
+                                    <img src="asset/images/products/product_3.jpg" alt="Sundarban Honey 500g">
+                                </a>
+                                <div class="product-info">
+                                    <h3 class="product-title">Sundarban Honey 500g</h3>
+                                    <span class="product-price">৳950</span>
+                                    <button class="btn-add-cart">
+                                        <i class="fa-solid fa-cart-shopping"></i> Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Pagination Dots -->
+                    <div class="swiper-pagination products-pagination"></div>
+                </div>
+
+            </div>
+        </section>
+        <!-- ========================================
+      Cooking Essentials Section End
+    ========================================= -->
+
+    </main>
+
+    <!-- ========================================
+         Main Section End
+    ========================================= -->
+
+
+    <!-- ========================================
+         Footer Section Start
+    ========================================= -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+            <div class="footer-main">
+                <div class="row g-4">
+
+                    <!-- Company Info -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+
+                            <a href="index.html" class="footer-logo d-flex align-items-center gap-2">
+                                <img src="asset/images/logo/logo.png" alt="Ghorer Bazar Logo" height="40">
+                            </a>
+
+                            <p>Ghorer Bazar is an e-commerce platform dedicated to providing safe and reliable food to
+                                every home.</p>
+
+                            <ul class="footer-contact">
+                                <li><i class="fa-solid fa-location-dot"></i> Rampura, Dhaka, Bangladesh</li>
+                                <li><i class="fa-solid fa-phone"></i> +8809642922922</li>
+                                <li><i class="fa-solid fa-envelope"></i> contact@ghorerbazar.com</li>
+                            </ul>
+
+                            <div class="footer-social">
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            </div>
+
+                            <div class="app-download">
+                                <h4>Download App on Mobile :</h4>
+                                <div class="app-download-links">
+                                    <a href="#"><img src="asset/images/footer/google-play.svg" alt="Google Play"></a>
+                                    <a href="#"><img src="asset/images/footer/app-store.svg" alt="App Store"></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Information -->
+                    <div class="col-lg-2 col-md-6 col-6">
+                        <div class="footer-widget">
+                            <h4>Information</h4>
+                            <ul>
+                                <li><a href="about.html">About us</a></li>
+                                <li><a href="contact.html">Contact us</a></li>
+                                <li><a href="#">Company Information</a></li>
+                                <li><a href="#">Ghorer Bazar Stories</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="careers.html">Careers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Shop By -->
+                    <div class="col-lg-2 col-md-6 col-6">
+                        <div class="footer-widget">
+                            <h4>Shop By</h4>
+                            <ul>
+                                <li><a href="oil-ghee.html">Oil & Ghee</a></li>
+                                <li><a href="honey.html">Honey</a></li>
+                                <li><a href="dates.html">Dates</a></li>
+                                <li><a href="spices.html">Spices</a></li>
+                                <li><a href="nuts-seeds.html">Nuts & Seeds</a></li>
+                                <li><a href="beverage.html">Beverage</a></li>
+                                <li><a href="#">Functional Foods</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Support -->
+                    <div class="col-lg-2 col-md-6 col-6">
+                        <div class="footer-widget">
+                            <h4>Support</h4>
+                            <ul>
+                                <li><a href="#">Support Center</a></li>
+                                <li><a href="#">How to Order</a></li>
+                                <li><a href="track-order.html">Order Tracking</a></li>
+                                <li><a href="#">Payment</a></li>
+                                <li><a href="#">Shipping</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Consumer Policy -->
+                    <div class="col-lg-3 col-md-6 col-6">
+                        <div class="footer-widget">
+                            <h4>Consumer Policy</h4>
+                            <ul>
+                                <li><a href="#">Happy Return</a></li>
+                                <li><a href="#">Refund Policy</a></li>
+                                <li><a href="#">Exchange</a></li>
+                                <li><a href="#">Cancellation</a></li>
+                                <li><a href="#">Pre-Order</a></li>
+                                <li><a href="#">Extra Discount</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <!-- Bottom Bar -->
+            <div class="footer-bottom">
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+
+                    <p>Copyright &copy; 2026 GhorerBazar</p>
+
+                    <div class="d-flex align-items-center gap-2 flex-wrap">
+                        <span class="pay-with-text">Pay With</span>
+                        <img src="asset/images/footer/sslcommerz.png" alt="Verified by SSLCommerz" class="ssl-badge">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- ========================================
+         Footer Section End
+    ========================================= -->
+
+
+    <!-- ========================================
+     Floating Cart Summary (Trigger)
+======================================== -->
+    <div class="floating-cart" id="floatingCart">
+        <button type="button" class="floating-cart-link" id="cartTriggerBtn">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="floating-cart-count" id="floatingCartCount">0 Items</span>
+            <span class="floating-cart-total" id="floatingCartTotal">৳0.00</span>
+        </button>
+    </div>
+
+    <!-- ========================================
+     Cart Offcanvas Sidebar
+======================================== -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <div class="cart-offcanvas" id="cartOffcanvas">
+
+        <div class="cart-offcanvas-header">
+            <h3><i class="fa-solid fa-bag-shopping"></i> My Cart</h3>
+            <button type="button" class="cart-close-btn" id="cartCloseBtn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="cart-offcanvas-body" id="cartItemsContainer">
+            <!-- Cart items dynamically render hobe -->
+        </div>
+
+        <div class="cart-offcanvas-empty" id="cartEmptyState">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <p>Your cart is empty</p>
+            <span>Add some products to get started</span>
+        </div>
+
+        <div class="cart-offcanvas-footer" id="cartFooter">
+            <div class="cart-subtotal-row">
+                <span>Subtotal</span>
+                <span id="cartSubtotal">৳0.00</span>
+            </div>
+            <a href="checkout.html" class="btn-checkout">Proceed to Checkout</a>
+        </div>
+
+    </div>
+
+    <!-- ========================================
+     Scroll To Top Button with Progress Ring
+======================================== -->
+    <button type="button" id="scroll-top" class="scroll-top-btn" aria-label="Scroll to top">
+        <svg class="scroll-progress-ring" width="46" height="46" viewBox="0 0 46 46">
+            <circle class="scroll-progress-ring__bg" cx="23" cy="23" r="20"></circle>
+            <circle class="scroll-progress-ring__fill" cx="23" cy="23" r="20"></circle>
+        </svg>
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+
+    <!-- ========================================
+     Chat Widget (Message Section)
+======================================== -->
+    <div class="chat-widget closed" id="chatWidget">
+
+        <!-- Welcome Popup Card -->
+        <div class="chat-popup-card hidden" id="chatPopupCard">
+
+            <div class="chat-popup-header">
+                <div class="chat-popup-logo">
+                    <img src="asset/images/logo/favicon.png" alt="Ghorer Bazar">
+                </div>
+            </div>
+
+            <div class="chat-popup-body">
+                <h3>আসসালামু আলাইকুম, ঘরেরবাজারে স্বাগতম।</h3>
+                <p>আপনাকে কিভাবে সহযোগিতা করতে পারি?</p>
+            </div>
+
+            <a href="https://api.whatsapp.com/send" target="_blank" class="chat-popup-reply">
+                <i class="fa-regular fa-comment-dots"></i>
+                <div>
+                    <span class="reply-title">মেসেজ করুন।</span>
+                    <span class="reply-subtitle">Typically replies in 1 minutes</span>
+                </div>
+            </a>
+
+            <div class="chat-popup-footer">
+                Powered by <strong>Ghorer Bazar Chat</strong>
+            </div>
+
+        </div>
+
+        <!-- Toggle Button -->
+        <button type="button" class="chat-toggle-btn" id="chatToggleBtn" aria-label="Toggle chat">
+            <i class="fa-solid fa-chevron-down chat-icon-close"></i>
+            <i class="fa-regular fa-comment-dots chat-icon-open"></i>
+        </button>
+
+    </div>
+
+    <!-- ========================================
+       Swiper JS (age load korte hobe)
+    ========================================= -->
+    <script src="asset/js/swiper-bundle.min.js"></script>
+
+
+    <!-- ========================================
+       Bootstrap JS
+    ========================================= -->
+    <script src="asset/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- ========================================
+       Custom JS (shob shesh e - karon eta onno library gulo use kore)
+    ========================================= -->
+    <script src="asset/js/script.js"></script>
+
+
+</body>
+
+</html>
