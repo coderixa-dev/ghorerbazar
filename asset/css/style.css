@@ -2730,7 +2730,7 @@ button,
     position: relative;
     flex: 1;
     height: 480px;
-    
+
     border: 1px solid var(--border-color);
     border-radius: 10px;
     display: flex;
@@ -3382,4 +3382,302 @@ button,
     justify-content: center;
     font-size: 10px;
     cursor: pointer;
+}
+
+
+
+/* ========================================
+   Page Title Banner
+======================================== */
+
+.page-title-banner {
+    background: #eceff3;
+    padding: 55px 0;
+    text-align: center;
+}
+
+.page-title-banner h1 {
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--bg-dark);
+}
+
+@media (max-width: 767px) {
+    .page-title-banner {
+        padding: 35px 0;
+    }
+
+    .page-title-banner h1 {
+        font-size: 26px;
+    }
+}
+
+
+/* ========================================
+   Contact Us Page
+======================================== */
+
+.contact-section {
+    padding: 40px 0 60px;
+}
+
+.contact-intro {
+    max-width: 720px;
+    margin-bottom: 30px;
+}
+
+.contact-intro h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 12px;
+}
+
+.contact-intro p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.contact-info-block {
+    margin-bottom: 26px;
+}
+
+.contact-info-block p {
+    font-size: 15px;
+    line-height: 2;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info-block p i {
+    color: var(--primary-color);
+    width: 18px;
+    text-align: center;
+}
+
+.contact-block-title {
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 4px;
+}
+
+@media (max-width: 767px) {
+    .contact-section {
+        padding: 30px 0 45px;
+    }
+
+    .contact-info-block p {
+        font-size: 14px;
+    }
+}
+
+
+
+/* ========================================
+   About Us Page
+======================================== */
+
+.about-section {
+    padding: 40px 0 60px;
+}
+
+.about-section p {
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-color);
+    max-width: 1400px;
+}
+
+@media (max-width: 767px) {
+    .about-section {
+        padding: 30px 0 45px;
+    }
+
+    .about-section p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+}
+
+
+
+
+/* ========================================
+   Company Information Page
+======================================== */
+
+.company-info-section {
+    padding: 40px 0 60px;
+}
+
+.company-info-line {
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-color);
+    margin-bottom: 22px;
+}
+
+.company-info-line strong {
+    color: var(--secondary-color);
+}
+
+@media (max-width: 767px) {
+    .company-info-section {
+        padding: 30px 0 45px;
+    }
+
+    .company-info-line {
+        font-size: 14px;
+        margin-bottom: 18px;
+    }
+}
+
+
+
+
+/* ========================================
+   Terms & Conditions / Legal Pages
+======================================== */
+
+.terms-section {
+    padding: 40px 0 60px;
+}
+
+.terms-main-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 6px;
+}
+
+.terms-updated {
+    font-size: 13px;
+    color: var(--light-color);
+    font-style: italic;
+    margin-bottom: 24px;
+}
+
+.terms-section p {
+    font-size: 14px;
+    line-height: 1.85;
+    color: var(--text-color);
+    margin-bottom: 16px;
+    max-width: 1400px;
+}
+
+.terms-section h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-top: 30px;
+    margin-bottom: 12px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.terms-section h4::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 32px;
+    height: 2px;
+    background: var(--primary-color);
+}
+
+.terms-list {
+    margin: 0 0 16px 0;
+    padding-left: 20px;
+}
+
+.terms-list li {
+    list-style: disc;
+    font-size: 14px;
+    line-height: 1.9;
+    color: var(--text-color);
+    margin-bottom: 8px;
+}
+
+.terms-contact-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.terms-contact-list li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.terms-contact-list li i {
+    color: var(--primary-color);
+    width: 16px;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .terms-section {
+        padding: 30px 0 45px;
+    }
+
+    .terms-main-title {
+        font-size: 18px;
+    }
+
+    .terms-section p,
+    .terms-list li {
+        font-size: 13px;
+    }
+
+    .terms-section h4 {
+        font-size: 15px;
+        margin-top: 24px;
+    }
+}
+
+
+
+/* ========================================
+   About Us Page
+======================================== */
+
+.about-section {
+    padding: 40px 0 60px;
+}
+
+.about-section p {
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-color);
+    max-width: 1400px;
+}
+
+.about-section p + p {
+    margin-top: 16px;
+}
+
+.careers-heading {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 16px;
+}
+
+@media (max-width: 767px) {
+    .about-section {
+        padding: 30px 0 45px;
+    }
+
+    .about-section p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .careers-heading {
+        font-size: 18px;
+    }
 }
