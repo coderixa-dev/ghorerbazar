@@ -579,3 +579,37 @@ if (reviewUploadBox && reviewImageInput && reviewImagePreview) {
     });
 
 }
+
+
+
+
+// ========================================
+//   Track Order - Search Form
+// ========================================
+const trackOrderForm = document.getElementById("trackOrderForm");
+const trackOrderInput = document.getElementById("trackOrderInput");
+const trackResultBox = document.getElementById("trackResultBox");
+
+if (trackOrderForm) {
+    trackOrderForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const orderNumber = trackOrderInput.value.trim();
+
+        if (!orderNumber) {
+            alert("অনুগ্রহ করে আপনার Order Number দিন।");
+            return;
+        }
+
+        trackResultBox.innerHTML = `
+            <div class="track-result-icon">
+                <i class="fa-solid fa-box-open"></i>
+            </div>
+            <h3 class="track-result-title">Order Not Found</h3>
+            <p class="track-result-text">We couldn't find an order with that number. Please double-check and try again.</p>
+            <a href="index.html" class="track-back-btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Shopping
+            </a>
+        `;
+    });
+}
